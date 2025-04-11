@@ -1,6 +1,20 @@
 # bossjob-doc
 doc of bossjob
 
+## bossjob网址大全
+
+> bossjob-jobseeker-client【求职端】【prod】https://bossjob.com
+
+> bossjob-jobseeker-client【求职端】【test】https://demo.bossjob.com
+
+> bossjob-jobseeker-client【求职端】【test2】https://test2demo.bossjob.com
+
+> Bosshunt-Client【雇主端】【prod】https://employer.bossjob.com
+
+> Bosshunt-Client【雇主端】【test】https://dev.employer.bossjob.com
+
+> Bosshunt-Client【雇主端】【test2】https://test2.employer.bossjob.com
+
 ## 富文本编辑器
 
 ### react-quill实现有序列表始终正确排序
