@@ -43,4 +43,30 @@ doc of bossjob
 white-space: pre-wrap; 是 pre 和 normal 的混合体：
 ✅ ​保留格式 + ✅ ​响应式换行 = 兼顾代码可读性与页面适配性。
 
+## Cascader选中第一级，第二级置顶
+
+```
+onDropdownVisibleChange={(visible) => {
+  if (visible) {
+    // 在弹出框打开时绑定 hover 监听
+    setTimeout(() => {
+      const firstColumn = document.querySelectorAll('.ant-cascader-menu')[0];
+      if (firstColumn) {
+        const items = firstColumn.querySelectorAll('.ant-cascader-menu-item');
+        items.forEach((item) => {
+          (item as HTMLElement).onmouseenter = () => {
+            setTimeout(() => {
+              const menus = document.querySelectorAll('.ant-cascader-menu');
+              if (menus.length > 1) {
+                menus[1].scrollTop = 0;
+              }
+            }, 30);
+          };
+        });
+      }
+    }, 100);
+  }
+}}
+```
+
 
